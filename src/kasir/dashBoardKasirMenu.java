@@ -8,20 +8,25 @@ package kasir;
  *
  * @author ACER
  */
-public class dashBoardKasir extends javax.swing.JFrame {
+public class dashBoardKasirMenu extends javax.swing.JFrame {
 
     /**
      * Creates new form dashBoardKasir
      */
-    public dashBoardKasir() {
+    public dashBoardKasirMenu() {
         initComponents();
     }
     
     void tutup(){
     new dashBoardKasirStockBarang().dispose();
     new dashBoardKasirLaporan().dispose();
-    new dashBoardKasirMenu().dispose();
     new dashBoardKasir().dispose();
+    new dashBoardKasirMenu().dispose();
+    new dashBoardKasirSnack().dispose();
+    new dashBoardKasirGeprek().dispose();
+    new dashBoardKasirSeblak().dispose();
+    new dashBoardKasirMinuman().dispose();
+    new dashBoardKasirMieLVL().dispose();
 }
 
     /**
@@ -39,10 +44,16 @@ public class dashBoardKasir extends javax.swing.JFrame {
         btnStockBarang = new javax.swing.JButton();
         btnLaporan = new javax.swing.JButton();
         btnKeluar = new javax.swing.JButton();
+        btnMenuKasirSemua = new javax.swing.JButton();
+        btnMenuKasirGeprek = new javax.swing.JButton();
+        btnMenuKasirSeblak = new javax.swing.JButton();
+        btnMenuKasirSnack = new javax.swing.JButton();
+        btnMenuKasirMieLVL = new javax.swing.JButton();
+        btnMenuKasirMinuman = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Input Transaksi");
+        jLabel1.setText("Menu");
 
         btnKasir.setText("Kasir");
         btnKasir.addActionListener(new java.awt.event.ActionListener() {
@@ -79,6 +90,49 @@ public class dashBoardKasir extends javax.swing.JFrame {
             }
         });
 
+        btnMenuKasirSemua.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnMenuKasirSemua.setText("Semua");
+        btnMenuKasirSemua.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMenuKasirSemuaActionPerformed(evt);
+            }
+        });
+
+        btnMenuKasirGeprek.setText("Geprek");
+        btnMenuKasirGeprek.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMenuKasirGeprekActionPerformed(evt);
+            }
+        });
+
+        btnMenuKasirSeblak.setText("Seblak");
+        btnMenuKasirSeblak.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMenuKasirSeblakActionPerformed(evt);
+            }
+        });
+
+        btnMenuKasirSnack.setText("Snack");
+        btnMenuKasirSnack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMenuKasirSnackActionPerformed(evt);
+            }
+        });
+
+        btnMenuKasirMieLVL.setText("Mie LVL");
+        btnMenuKasirMieLVL.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMenuKasirMieLVLActionPerformed(evt);
+            }
+        });
+
+        btnMenuKasirMinuman.setText("Minuman");
+        btnMenuKasirMinuman.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMenuKasirMinumanActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -86,24 +140,44 @@ public class dashBoardKasir extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(57, 57, 57)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(btnKasir, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnMenu, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnKeluar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnLaporan, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnStockBarang, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(27, Short.MAX_VALUE))
+                            .addComponent(btnStockBarang, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(111, 111, 111)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnMenuKasirSemua)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btnMenuKasirGeprek)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btnMenuKasirSeblak)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btnMenuKasirSnack)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btnMenuKasirMieLVL)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnMenuKasirMinuman)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(3, 3, 3)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnMenuKasirSemua)
+                    .addComponent(btnMenuKasirGeprek)
+                    .addComponent(btnMenuKasirSeblak)
+                    .addComponent(btnMenuKasirSnack)
+                    .addComponent(btnMenuKasirMieLVL)
+                    .addComponent(btnMenuKasirMinuman))
+                .addGap(10, 10, 10)
                 .addComponent(btnKasir)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnMenu)
@@ -113,7 +187,7 @@ public class dashBoardKasir extends javax.swing.JFrame {
                 .addComponent(btnLaporan)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnKeluar)
-                .addContainerGap(103, Short.MAX_VALUE))
+                .addContainerGap(85, Short.MAX_VALUE))
         );
 
         pack();
@@ -128,14 +202,14 @@ public class dashBoardKasir extends javax.swing.JFrame {
 
     private void btnKasirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKasirActionPerformed
         // TODO add your handling code here:
-//        setVisible(false);
-//        new dashBoardKasir().setVisible(true);
+        setVisible(false);
+        new dashBoardKasir().setVisible(true);
     }//GEN-LAST:event_btnKasirActionPerformed
 
     private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
         // TODO add your handling code here:
-        setVisible(false);
-        new dashBoardKasirMenu().setVisible(true);
+//        setVisible(false);
+//        new dashBoardKasirMenu().setVisible(true);
     }//GEN-LAST:event_btnMenuActionPerformed
 
     private void btnLaporanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLaporanActionPerformed
@@ -150,6 +224,42 @@ public class dashBoardKasir extends javax.swing.JFrame {
         tutup();
         new loginKasir().setVisible(true);
     }//GEN-LAST:event_btnKeluarActionPerformed
+
+    private void btnMenuKasirSemuaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuKasirSemuaActionPerformed
+        // TODO add your handling code here:
+//        setVisible(false);
+//        new MenuKasirSemua().setVisible(true);
+    }//GEN-LAST:event_btnMenuKasirSemuaActionPerformed
+
+    private void btnMenuKasirSnackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuKasirSnackActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+        new dashBoardKasirSnack().setVisible(true);
+    }//GEN-LAST:event_btnMenuKasirSnackActionPerformed
+
+    private void btnMenuKasirGeprekActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuKasirGeprekActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+        new dashBoardKasirGeprek().setVisible(true);
+    }//GEN-LAST:event_btnMenuKasirGeprekActionPerformed
+
+    private void btnMenuKasirSeblakActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuKasirSeblakActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+        new dashBoardKasirSeblak().setVisible(true);
+    }//GEN-LAST:event_btnMenuKasirSeblakActionPerformed
+
+    private void btnMenuKasirMieLVLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuKasirMieLVLActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+        new dashBoardKasirMieLVL().setVisible(true);
+    }//GEN-LAST:event_btnMenuKasirMieLVLActionPerformed
+
+    private void btnMenuKasirMinumanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuKasirMinumanActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+        new dashBoardKasirMinuman().setVisible(true);
+    }//GEN-LAST:event_btnMenuKasirMinumanActionPerformed
 
     /**
      * @param args the command line arguments
@@ -168,20 +278,21 @@ public class dashBoardKasir extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(dashBoardKasir.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(dashBoardKasirMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(dashBoardKasir.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(dashBoardKasirMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(dashBoardKasir.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(dashBoardKasirMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(dashBoardKasir.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(dashBoardKasirMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new dashBoardKasir().setVisible(true);
+                new dashBoardKasirMenu().setVisible(true);
             }
         });
     }
@@ -191,6 +302,12 @@ public class dashBoardKasir extends javax.swing.JFrame {
     private javax.swing.JButton btnKeluar;
     private javax.swing.JButton btnLaporan;
     private javax.swing.JButton btnMenu;
+    private javax.swing.JButton btnMenuKasirGeprek;
+    private javax.swing.JButton btnMenuKasirMieLVL;
+    private javax.swing.JButton btnMenuKasirMinuman;
+    private javax.swing.JButton btnMenuKasirSeblak;
+    private javax.swing.JButton btnMenuKasirSemua;
+    private javax.swing.JButton btnMenuKasirSnack;
     private javax.swing.JButton btnStockBarang;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables

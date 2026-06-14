@@ -8,12 +8,12 @@ package kasir;
  *
  * @author ACER
  */
-public class dashBoardKasir extends javax.swing.JFrame {
+public class dashBoardKasirStockBarang extends javax.swing.JFrame {
 
     /**
      * Creates new form dashBoardKasir
      */
-    public dashBoardKasir() {
+    public dashBoardKasirStockBarang() {
         initComponents();
     }
     
@@ -21,7 +21,7 @@ public class dashBoardKasir extends javax.swing.JFrame {
     new dashBoardKasirStockBarang().dispose();
     new dashBoardKasirLaporan().dispose();
     new dashBoardKasirMenu().dispose();
-    new dashBoardKasir().dispose();
+    new dashBoardKasirStockBarang().dispose();
 }
 
     /**
@@ -42,7 +42,7 @@ public class dashBoardKasir extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Input Transaksi");
+        jLabel1.setText("Stock Barang");
 
         btnKasir.setText("Kasir");
         btnKasir.addActionListener(new java.awt.event.ActionListener() {
@@ -122,14 +122,14 @@ public class dashBoardKasir extends javax.swing.JFrame {
 
     private void btnStockBarangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStockBarangActionPerformed
         // TODO add your handling code here:
-        setVisible(false);
-        new dashBoardKasirStockBarang().setVisible(true);
+//        setVisible(false);
+//        new dashBoardKasirStockBarang().setVisible(true);
     }//GEN-LAST:event_btnStockBarangActionPerformed
 
     private void btnKasirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKasirActionPerformed
         // TODO add your handling code here:
-//        setVisible(false);
-//        new dashBoardKasir().setVisible(true);
+        setVisible(false);
+        new dashBoardKasir().setVisible(true);
     }//GEN-LAST:event_btnKasirActionPerformed
 
     private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
@@ -168,20 +168,21 @@ public class dashBoardKasir extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(dashBoardKasir.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(dashBoardKasirStockBarang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(dashBoardKasir.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(dashBoardKasirStockBarang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(dashBoardKasir.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(dashBoardKasirStockBarang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(dashBoardKasir.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(dashBoardKasirStockBarang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new dashBoardKasir().setVisible(true);
+                new dashBoardKasirStockBarang().setVisible(true);
             }
         });
     }

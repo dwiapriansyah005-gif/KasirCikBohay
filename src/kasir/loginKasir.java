@@ -11,7 +11,7 @@ package kasir;
 public class loginKasir extends javax.swing.JFrame {
 
     /**
-     * Creates new form loginKasir
+     * Creates new form loginadmin
      */
     public loginKasir() {
         initComponents();
@@ -26,21 +26,102 @@ public class loginKasir extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        tUserNameKasir = new javax.swing.JTextField();
+        tPasswordKasir = new javax.swing.JTextField();
+        btnLoginKasir = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        tUserNameKasir.setText("Masukkan Username");
+        tUserNameKasir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tUserNameKasirActionPerformed(evt);
+            }
+        });
+        tUserNameKasir.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                tUserNameKasirKeyTyped(evt);
+            }
+        });
+
+        tPasswordKasir.setText("Masukkan Password");
+        tPasswordKasir.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                tPasswordKasirKeyTyped(evt);
+            }
+        });
+
+        btnLoginKasir.setText("Sign In");
+        btnLoginKasir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLoginKasirActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("KASIR");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 117, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(tUserNameKasir, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(tPasswordKasir, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(102, 102, 102))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(btnLoginKasir)
+                                .addGap(20, 20, 20))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(34, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(tUserNameKasir, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
+                .addComponent(tPasswordKasir, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(43, 43, 43)
+                .addComponent(btnLoginKasir)
+                .addGap(24, 24, 24))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnLoginKasirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginKasirActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        new dashBoardKasir().setVisible(true);
+    }//GEN-LAST:event_btnLoginKasirActionPerformed
+
+    private void tUserNameKasirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tUserNameKasirActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tUserNameKasirActionPerformed
+
+    private void tUserNameKasirKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tUserNameKasirKeyTyped
+        // TODO add your handling code here:
+        tUserNameKasir.setText(null);
+    }//GEN-LAST:event_tUserNameKasirKeyTyped
+
+    private void tPasswordKasirKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tPasswordKasirKeyTyped
+        // TODO add your handling code here:
+        tPasswordKasir.setText(null);
+    }//GEN-LAST:event_tPasswordKasirKeyTyped
 
     /**
      * @param args the command line arguments
@@ -68,6 +149,7 @@ public class loginKasir extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(loginKasir.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -78,5 +160,9 @@ public class loginKasir extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnLoginKasir;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JTextField tPasswordKasir;
+    private javax.swing.JTextField tUserNameKasir;
     // End of variables declaration//GEN-END:variables
 }
