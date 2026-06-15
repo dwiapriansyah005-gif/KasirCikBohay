@@ -50,6 +50,7 @@ public class stockBarangAdmin extends javax.swing.JFrame {
             }
         });
 
+        btnStockBarang.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnStockBarang.setText("Stock Barang");
 
         btnKeluarAdmin.setText("Keluar");

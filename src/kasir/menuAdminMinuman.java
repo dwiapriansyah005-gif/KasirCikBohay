@@ -16,6 +16,14 @@ public class menuAdminMinuman extends javax.swing.JFrame {
     public menuAdminMinuman() {
         initComponents();
     }
+    
+    void tutup(){
+        new menuAdminGeprek().dispose();
+        new menuAdminMinuman().dispose();
+        new menuAdminSnack().dispose();
+        new menuAdminMieLVL().dispose();
+        new menuAdminSeblak().dispose();
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -46,6 +54,7 @@ public class menuAdminMinuman extends javax.swing.JFrame {
             }
         });
 
+        btnMinuman.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnMinuman.setText("Minuman");
         btnMinuman.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -136,7 +145,7 @@ public class menuAdminMinuman extends javax.swing.JFrame {
 
     private void btnKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKembaliActionPerformed
         // TODO add your handling code here:
-        dispose();
+        tutup();
         new dashBoardAdminLaporan().setVisible(true);
     }//GEN-LAST:event_btnKembaliActionPerformed
 
@@ -168,7 +177,7 @@ public class menuAdminMinuman extends javax.swing.JFrame {
 
     private void btnKeluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKeluarActionPerformed
         // TODO add your handling code here:
-        setVisible(false);
+        tutup();
         new loginAdmin().setVisible(true);
     }//GEN-LAST:event_btnKeluarActionPerformed
 

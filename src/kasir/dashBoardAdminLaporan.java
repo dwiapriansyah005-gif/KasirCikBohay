@@ -36,6 +36,7 @@ public class dashBoardAdminLaporan extends javax.swing.JFrame {
 
         jLabel1.setText("Laporan Penjualan");
 
+        btnLaporanAdmin.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnLaporanAdmin.setText("Laporan Penjualan");
 
         btnMenuAdmin.setText("Menu");
@@ -70,7 +71,7 @@ public class dashBoardAdminLaporan extends javax.swing.JFrame {
                     .addComponent(btnMenuAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnStockBarang, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnKeluarAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(266, Short.MAX_VALUE))
+                .addContainerGap(261, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE))

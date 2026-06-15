@@ -16,6 +16,14 @@ public class menuAdminGeprek extends javax.swing.JFrame {
     public menuAdminGeprek() {
         initComponents();
     }
+    
+    void tutup(){
+        new menuAdminGeprek().dispose();
+        new menuAdminMinuman().dispose();
+        new menuAdminSnack().dispose();
+        new menuAdminMieLVL().dispose();
+        new menuAdminSeblak().dispose();
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -60,6 +68,7 @@ public class menuAdminGeprek extends javax.swing.JFrame {
             }
         });
 
+        btnGeprek.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnGeprek.setText("Geprek");
         btnGeprek.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -136,7 +145,7 @@ public class menuAdminGeprek extends javax.swing.JFrame {
 
     private void btnKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKembaliActionPerformed
         // TODO add your handling code here:
-        dispose();
+        tutup();
         new dashBoardAdminLaporan().setVisible(true);
     }//GEN-LAST:event_btnKembaliActionPerformed
 
@@ -148,15 +157,14 @@ public class menuAdminGeprek extends javax.swing.JFrame {
 
     private void btnGeprekActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGeprekActionPerformed
         // TODO add your handling code here:
-        setVisible(false);
-        new menuAdminGeprek().setVisible(true);        
+//        setVisible(false);
+//        new menuAdminGeprek().setVisible(true);        
     }//GEN-LAST:event_btnGeprekActionPerformed
 
     private void btnMieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMieActionPerformed
         // TODO add your handling code here:
         setVisible(false);
         new menuAdminMieLVL().setVisible(true);
-
     }//GEN-LAST:event_btnMieActionPerformed
 
     private void btnSnackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSnackActionPerformed
@@ -167,7 +175,7 @@ public class menuAdminGeprek extends javax.swing.JFrame {
 
     private void btnKeluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKeluarActionPerformed
         // TODO add your handling code here:
-        setVisible(false);
+        tutup();
         new loginAdmin().setVisible(true);
     }//GEN-LAST:event_btnKeluarActionPerformed
 

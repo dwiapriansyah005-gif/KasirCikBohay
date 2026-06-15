@@ -30,6 +30,7 @@ public class loginKasir extends javax.swing.JFrame {
         tPasswordKasir = new javax.swing.JTextField();
         btnLoginKasir = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        btnKembaliLogin = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -63,6 +64,13 @@ public class loginKasir extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("KASIR");
 
+        btnKembaliLogin.setText("Kembali");
+        btnKembaliLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKembaliLoginActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -79,6 +87,8 @@ public class loginKasir extends javax.swing.JFrame {
                                     .addComponent(tPasswordKasir, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(102, 102, 102))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(btnKembaliLogin)
+                                .addGap(18, 18, 18)
                                 .addComponent(btnLoginKasir)
                                 .addGap(20, 20, 20))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -95,7 +105,9 @@ public class loginKasir extends javax.swing.JFrame {
                 .addGap(33, 33, 33)
                 .addComponent(tPasswordKasir, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(43, 43, 43)
-                .addComponent(btnLoginKasir)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnLoginKasir)
+                    .addComponent(btnKembaliLogin))
                 .addGap(24, 24, 24))
         );
 
@@ -122,6 +134,12 @@ public class loginKasir extends javax.swing.JFrame {
         // TODO add your handling code here:
         tPasswordKasir.setText(null);
     }//GEN-LAST:event_tPasswordKasirKeyTyped
+
+    private void btnKembaliLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKembaliLoginActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        new Dashboard().setVisible(true);
+    }//GEN-LAST:event_btnKembaliLoginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -160,6 +178,7 @@ public class loginKasir extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnKembaliLogin;
     private javax.swing.JButton btnLoginKasir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JTextField tPasswordKasir;

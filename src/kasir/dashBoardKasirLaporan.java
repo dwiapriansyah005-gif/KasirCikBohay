@@ -65,6 +65,7 @@ public class dashBoardKasirLaporan extends javax.swing.JFrame {
             }
         });
 
+        btnLaporan.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnLaporan.setText("Laporan");
         btnLaporan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

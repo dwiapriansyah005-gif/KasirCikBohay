@@ -62,6 +62,7 @@ public class dashBoardKasirMenu extends javax.swing.JFrame {
             }
         });
 
+        btnMenu.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnMenu.setText("Menu");
         btnMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -202,7 +203,7 @@ public class dashBoardKasirMenu extends javax.swing.JFrame {
 
     private void btnKasirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKasirActionPerformed
         // TODO add your handling code here:
-        setVisible(false);
+//        setVisible(false);
         new dashBoardKasir().setVisible(true);
     }//GEN-LAST:event_btnKasirActionPerformed
 
@@ -220,7 +221,6 @@ public class dashBoardKasirMenu extends javax.swing.JFrame {
 
     private void btnKeluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKeluarActionPerformed
         // TODO add your handling code here:
-        setVisible(false);
         tutup();
         new loginKasir().setVisible(true);
     }//GEN-LAST:event_btnKeluarActionPerformed

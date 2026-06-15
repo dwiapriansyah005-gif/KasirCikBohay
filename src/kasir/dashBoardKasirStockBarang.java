@@ -58,6 +58,7 @@ public class dashBoardKasirStockBarang extends javax.swing.JFrame {
             }
         });
 
+        btnStockBarang.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnStockBarang.setText("Stock Barang");
         btnStockBarang.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -31,7 +31,7 @@
                   <Component id="btnStockBarang" alignment="0" max="32767" attributes="0"/>
                   <Component id="btnKeluarAdmin" alignment="0" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="266" max="32767" attributes="0"/>
+              <EmptySpace pref="261" max="32767" attributes="0"/>
           </Group>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -65,6 +65,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnLaporanAdmin">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="12" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Laporan Penjualan"/>
       </Properties>
     </Component>

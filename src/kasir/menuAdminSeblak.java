@@ -16,6 +16,14 @@ public class menuAdminSeblak extends javax.swing.JFrame {
     public menuAdminSeblak() {
         initComponents();
     }
+    
+    void tutup(){
+        new menuAdminGeprek().dispose();
+        new menuAdminMinuman().dispose();
+        new menuAdminSnack().dispose();
+        new menuAdminMieLVL().dispose();
+        new menuAdminSeblak().dispose();
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -53,6 +61,7 @@ public class menuAdminSeblak extends javax.swing.JFrame {
             }
         });
 
+        btnSeblak.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnSeblak.setText("Seblak");
         btnSeblak.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -136,14 +145,14 @@ public class menuAdminSeblak extends javax.swing.JFrame {
 
     private void btnKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKembaliActionPerformed
         // TODO add your handling code here:
-        dispose();
+        tutup();
         new dashBoardAdminLaporan().setVisible(true);
     }//GEN-LAST:event_btnKembaliActionPerformed
 
     private void btnSeblakActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSeblakActionPerformed
         // TODO add your handling code here:
-        setVisible(false);
-        new menuAdminSeblak().setVisible(true);
+//        setVisible(false);
+//        new menuAdminSeblak().setVisible(true);
     }//GEN-LAST:event_btnSeblakActionPerformed
 
     private void btnGeprekActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGeprekActionPerformed
@@ -168,7 +177,7 @@ public class menuAdminSeblak extends javax.swing.JFrame {
 
     private void btnKeluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKeluarActionPerformed
         // TODO add your handling code here:
-        setVisible(false);
+        tutup();
         new loginAdmin().setVisible(true);
     }//GEN-LAST:event_btnKeluarActionPerformed
 

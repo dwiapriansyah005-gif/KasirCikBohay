@@ -16,6 +16,14 @@ public class menuAdminMieLVL extends javax.swing.JFrame {
     public menuAdminMieLVL() {
         initComponents();
     }
+    
+    void tutup(){
+        new menuAdminGeprek().dispose();
+        new menuAdminMinuman().dispose();
+        new menuAdminSnack().dispose();
+        new menuAdminMieLVL().dispose();
+        new menuAdminSeblak().dispose();
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -67,6 +75,7 @@ public class menuAdminMieLVL extends javax.swing.JFrame {
             }
         });
 
+        btnMie.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnMie.setText("Mie LVL");
         btnMie.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -136,7 +145,7 @@ public class menuAdminMieLVL extends javax.swing.JFrame {
 
     private void btnKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKembaliActionPerformed
         // TODO add your handling code here:
-        dispose();
+        tutup();
         new dashBoardAdminLaporan().setVisible(true);
     }//GEN-LAST:event_btnKembaliActionPerformed
 
@@ -154,8 +163,8 @@ public class menuAdminMieLVL extends javax.swing.JFrame {
 
     private void btnMieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMieActionPerformed
         // TODO add your handling code here:
-        setVisible(false);
-        new menuAdminMieLVL().setVisible(true);
+//        setVisible(false);
+//        new menuAdminMieLVL().setVisible(true);
 
     }//GEN-LAST:event_btnMieActionPerformed
 
@@ -168,7 +177,7 @@ public class menuAdminMieLVL extends javax.swing.JFrame {
 
     private void btnKeluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKeluarActionPerformed
         // TODO add your handling code here:
-        setVisible(false);
+        tutup();
         new loginAdmin().setVisible(true);
     }//GEN-LAST:event_btnKeluarActionPerformed
 

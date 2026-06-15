@@ -44,6 +44,7 @@ public class dashBoardKasir extends javax.swing.JFrame {
 
         jLabel1.setText("Input Transaksi");
 
+        btnKasir.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnKasir.setText("Kasir");
         btnKasir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
