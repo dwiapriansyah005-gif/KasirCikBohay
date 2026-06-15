@@ -8,12 +8,12 @@ package kasir;
  *
  * @author ACER
  */
-public class loginadmin extends javax.swing.JFrame {
+public class loginAdmin extends javax.swing.JFrame {
 
     /**
      * Creates new form loginadmin
      */
-    public loginadmin() {
+    public loginAdmin() {
         initComponents();
     }
 
@@ -28,20 +28,48 @@ public class loginadmin extends javax.swing.JFrame {
 
         tUserNameAdmin = new javax.swing.JTextField();
         tPasswordAdmin = new javax.swing.JTextField();
-        btnLoginAdmin = new javax.swing.JButton();
+        btnLoginKasir = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        btnKembaliLogin = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        tUserNameAdmin.setText("jTextField1");
+        tUserNameAdmin.setText("Masukkan Username");
+        tUserNameAdmin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tUserNameAdminActionPerformed(evt);
+            }
+        });
+        tUserNameAdmin.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                tUserNameAdminKeyTyped(evt);
+            }
+        });
 
-        tPasswordAdmin.setText("jTextField1");
+        tPasswordAdmin.setText("Masukkan Password");
+        tPasswordAdmin.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                tPasswordAdminKeyTyped(evt);
+            }
+        });
 
-        btnLoginAdmin.setText("Sign In");
+        btnLoginKasir.setText("Sign In");
+        btnLoginKasir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLoginKasirActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("ADMIN");
+
+        btnKembaliLogin.setText("Kembali");
+        btnKembaliLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKembaliLoginActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -59,7 +87,9 @@ public class loginadmin extends javax.swing.JFrame {
                                     .addComponent(tPasswordAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(102, 102, 102))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(btnLoginAdmin)
+                                .addComponent(btnKembaliLogin)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnLoginKasir)
                                 .addGap(20, 20, 20))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -75,12 +105,41 @@ public class loginadmin extends javax.swing.JFrame {
                 .addGap(33, 33, 33)
                 .addComponent(tPasswordAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(43, 43, 43)
-                .addComponent(btnLoginAdmin)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnLoginKasir)
+                    .addComponent(btnKembaliLogin))
                 .addGap(24, 24, 24))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnLoginKasirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginKasirActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        new dashBoardKasir().setVisible(true);
+    }//GEN-LAST:event_btnLoginKasirActionPerformed
+
+    private void tUserNameAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tUserNameAdminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tUserNameAdminActionPerformed
+
+    private void tUserNameAdminKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tUserNameAdminKeyTyped
+        // TODO add your handling code here:
+        tUserNameAdmin.setText(null);
+    }//GEN-LAST:event_tUserNameAdminKeyTyped
+
+    private void tPasswordAdminKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tPasswordAdminKeyTyped
+        // TODO add your handling code here:
+        tPasswordAdmin.setText(null);
+    }//GEN-LAST:event_tPasswordAdminKeyTyped
+
+    private void btnKembaliLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKembaliLoginActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        new Dashboard().setVisible(true);
+    }//GEN-LAST:event_btnKembaliLoginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -99,26 +158,30 @@ public class loginadmin extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(loginadmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(loginAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(loginadmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(loginAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(loginadmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(loginAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(loginadmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(loginAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new loginadmin().setVisible(true);
+                new loginAdmin().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnLoginAdmin;
+    private javax.swing.JButton btnKembaliLogin;
+    private javax.swing.JButton btnLoginKasir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JTextField tPasswordAdmin;
     private javax.swing.JTextField tUserNameAdmin;
